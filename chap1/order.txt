@@ -1,0 +1,11 @@
+defer의 사용과 로드되는 순서
+
+1. defer 를 사용하는 script => html 을 다 파싱하고 DOMContentLoaded 이전에 먼저 로딩됨
+
+2. 'DOMContentLoaded' => only document (즉, html) 의 로딩이 완료되면 호출됨
+
+3. 'load' => after resources (css, image) 등 모든 리소스가 다운된후 실행된다.
+
+else: beforeunload, unload 등의 페이지를 나갈때 실행하는 것도 있음.
+
+
