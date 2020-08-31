@@ -1,0 +1,5 @@
+1. 모든 요소들을 가운데에 두고 시작
+
+2. addEventListener 등록: ('mousemove') => event.clientX, event.clientY 로 마우스 위치
+
+3. 요소들의 위치를 정의한 css에 직접적으로 접근해서 파싱한 x, y 위치로 변경=> vertical.style.left = `${x}px`;
