@@ -1,0 +1,1 @@
+console.log('js loaded') //1번

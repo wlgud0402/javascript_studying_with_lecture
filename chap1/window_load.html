@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="window_load.js" defer></script> <!-- 1번 defer => html 다 파싱하고 DOMContentLoaded 이전에 먼저 됨-->
+</head>
+<body>
+    <script>
+        //only document 2번 load 이전에 실행
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('DOMContentLoaded');
+        });
+
+        //after resources (css, images) 3번 모든 리소스가 다운된후 실행된다
+        window.addEventListener('load', () => {
+            console.log('load');
+        })
+
+        //beforeunload, unload 등의 함수도 있다 => ex) 페이지를 나갈때 실행됨
+    </script>
+</body>
+</html>
