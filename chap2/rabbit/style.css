@@ -1,0 +1,18 @@
+html {
+    background-color: black;
+    text-align: center;
+}
+
+.find_btn{
+    font-size: 25px;
+    color:white;
+    background-color: red;
+    position: fixed;
+    top:20px;
+    right: 750px;
+}
+
+img {
+    display: block;
+    margin:auto;
+}
