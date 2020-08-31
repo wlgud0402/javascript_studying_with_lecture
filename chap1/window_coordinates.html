@@ -21,10 +21,21 @@
         .container{
             background-color: black;
         }
+
+        .float{
+            position: fixed;
+            top:20px;
+            right:20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="float">
+            <button class="by">scroll by 100px</button>
+            <button class="to">scroll to 100px</button>
+            <button class="into">scroll into special</button>
+        </div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
@@ -53,6 +64,21 @@
             console.log(`client: ${event.clientX}, ${event.clientY}`);
             console.log(`page: ${event.pageX}, ${event.pageY}`);
         });
+
+        const to = document.querySelector('.to');
+        to.addEventListener('click', (event) => {
+            window.scrollTo(0,0);
+        })
+
+        const by = document.querySelector('.by');
+        by.addEventListener('click', (event) => {
+            window.scrollBy(0,200);
+        })
+
+        const into = document.querySelector('.into');
+        into.addEventListener('click', (event) => {
+            special.scrollIntoView();
+        })
     </script>
 </body>
 </html>
