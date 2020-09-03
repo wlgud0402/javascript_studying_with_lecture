@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>안녕하세요</h1>
+        <h3>잘부탁드려요</h3>
+    </section>
+    <script>
+        const section = document.querySelector('section');
+        const h2 = document.createElement('h2');
+        h2.setAttribute('class', 'title'); //<h2 class="title"><h2>
+        h2.textContent = '제이름은 지형 킴 이에요'; //<h2 class="title">제이름은 지형 킴 이에요<h2>
+        //section.appendChild(h2);
+
+        const h3 = document.querySelector('h3');
+        section.insertBefore(h2, h3);
+    </script>
+</body>
+</html>
