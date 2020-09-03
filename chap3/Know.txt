@@ -11,3 +11,6 @@ DOM + CSSOM => Render Tree (실제 사용자에게 보여지는 부분이 만들
 4. will-change 를 사용하면 레이어를 새로 구성함 (남용할시 레이어가 몇겹이나 생길수 있다. => 좋지 않음)
 
 5. https://csstriggers.com/
+
+6. F12 를 누른후 performance 에서 record를 통해 layout shift가 일어나는지 등의 효율성등을 체크할수 있다//csstriggers.com/
+7. ctrl + shif + p => 개발툴 사용 (ex: layout shift)
