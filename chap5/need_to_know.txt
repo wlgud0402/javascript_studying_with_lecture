@@ -1,0 +1,8 @@
+1. 브라우저의 행동을 취소하는 event.preventDefault();
+
+    but passive 한 액션의 경우애는 취소할수 없다 (ex: scrolling 단: option을 passive:false 로 바꾸면 가능)
+    하지만 사용하지 않는것이 좋다.
+
+2. 이벤트 위임
+
+    자식요소에 모두 addEventListener 를 해주는것보다 부모에 등록하는 것이 좋다.
