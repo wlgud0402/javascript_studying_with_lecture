@@ -1,0 +1,16 @@
+이벤트를 처리할때 발생하는 capturing 과 bubbling
+
+capturing : 요소에 이벤트가 발생했을때 부모컨테이너에서 시작해서 capturing 을 통해 자식 요소에 접근
+
+bubbling : capturing을 통해 자식 요소에 접근한후 bubbling을 통해 그 위의 부모 요소에 까지 이벤트를 발생시킴
+
+// 1. event.stopPropagation();
+// 2. event.stopImmediatePropagation();
+을 통해서 막을 수 있지만 다른 곳에서 발생하는 이벤트도 막아버리므로 문제가 발생할 수 있다.
+
+if (event.target !== event.currentTarget){
+                return;
+            }
+
+같은 종류의 로직을 사용해서 하는것이 좋다. 
+이벤트가 발생하게 되는 target 과 실제 현제 target 을 비교하기
