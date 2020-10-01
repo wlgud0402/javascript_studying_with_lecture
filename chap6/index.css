@@ -1,12 +1,28 @@
+body {
+  background-color: black;
+}
+
 .container {
   display: flex;
   justify-content: center;
+}
+
+.start_btn {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.time {
+  position: absolute;
+  font-size: 30px;
 }
 
 .audio {
   display: none;
 }
 
-body {
-  background-color: black;
+.background {
+  width: 800px;
+  height: 500px;
 }
