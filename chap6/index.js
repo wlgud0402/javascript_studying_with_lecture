@@ -24,6 +24,8 @@ function start_game() {
   start_bgm();
   position_setting();
   interval = setInterval("timer()", 1000); //간격 1초로 반복 타이머 설정
+  let start_btn = document.querySelector(".start_btn");
+  start_btn.style.display = "none";
 }
 
 function position_setting() {
