@@ -1,7 +1,29 @@
+let score = document.querySelector(".score");
+let now_score = 10;
+
+let time = document.querySelector(".time");
+let num = 10;
+
+function timer() {
+  num--;
+  document.querySelector(".time").innerText = "00:" + num;
+  // $('.time').attr('value',num);//숫자 카운트 표시
+  if (num == 0) {
+    clearInterval(interval); //num이 10이 되면 타이머를 해제
+    if (now_score != 0) {
+      alert("패배");
+    } else {
+      alert("이겼다!");
+    }
+  }
+}
+
 function start_game() {
-  let score = document.querySelector(".score");
+  document.querySelector(".score").innerText = 10;
+  document.querySelector(".time").innerText = "00:" + 10;
   start_bgm();
   position_setting();
+  interval = setInterval("timer()", 1000); //간격 1초로 반복 타이머 설정
 }
 
 function position_setting() {
@@ -40,18 +62,28 @@ function position_setting() {
 
 const bug_pull_sound = new Audio("sound/bug_pull.mp3");
 function bug_pull() {
-  console.log("당근");
   bug_pull_sound.play();
-  // bug_pull_sound.pause();
+  bgm.pause();
+
+  alert("벌레뽑았데요~~ 패배!");
 }
 
 const carrot_pull_sound = new Audio("sound/carrot_pull.mp3");
+const game_win_sound = new Audio("sound/game_win.mp3");
 function carrot_pull() {
   console.log("당근");
   carrot_pull_sound.play();
   let target = event.target;
   target.style.display = "none";
-  // carrot_pull_sound.pause();
+  now_score -= 1;
+  document.querySelector(".score").innerText = now_score;
+
+  if (now_score == 0) {
+    // clearInterval(interval);
+    bgm.pause();
+    game_win_sound.play();
+    alert("이겼따");
+  }
 }
 
 const bgm = new Audio("sound/bg.mp3");
