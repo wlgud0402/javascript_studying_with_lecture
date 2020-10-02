@@ -18,6 +18,14 @@ body {
   font-size: 30px;
 }
 
+.score {
+  color: white;
+  border-radius: 47px;
+  height: 50px;
+  font-size: 50px;
+  background-color: orange;
+}
+
 .audio {
   display: none;
 }
@@ -25,4 +33,14 @@ body {
 .background {
   width: 800px;
   height: 500px;
+}
+
+.bug:hover {
+  width: 60px;
+  height: 60px;
+}
+
+.carrot:hover {
+  width: 90px;
+  height: 90px;
 }
